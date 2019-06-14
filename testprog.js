@@ -51,6 +51,43 @@ class Example extends Component {
             </Text>
           </View>
         </Window>
+
+        <Window style={{ height: '40%', width: '20%', top: 100, left: 100 }}>
+          <View
+            style={{
+              backgroundColor: 'blue',
+              flex: 1,
+              margin: 30,
+              padding: 30,
+            }}
+          >
+            <View
+              style={{
+                backgroundColor: 'black',
+                flex: 1,
+                justifyContent: 'space-between',
+              }}
+            >
+              <TouchableWithoutFeedback
+                onPress={() => console.log('Pressed')}
+                onLongPress={() => console.log('Long pressed')}
+              >
+                <View style={{ backgroundColor: 'white', height: 10 }} />
+              </TouchableWithoutFeedback>
+              <View style={{ backgroundColor: 'yellow', height: 10 }} />
+              <View style={{ backgroundColor: 'purple', height: 10 }} />
+            </View>
+            {this.state.a && (
+              <View style={{ backgroundColor: 'green', flex: 1 }} />
+            )}
+            <View style={{ backgroundColor: 'blue', flex: 1 }} />
+            <Text style={{ fontSize: 20 }}>
+              {this.state.test}
+              {this.state.a && <Text style={{ color: 'white' }}>Hello2</Text>}
+            </Text>
+          </View>
+        </Window>
+
         {this.state.a && (
           <Window>
             <View style={{ backgroundColor: 'blue' }} />
